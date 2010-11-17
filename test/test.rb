@@ -20,6 +20,8 @@ describe Object2module do
       end
 
       class Fixnum
+        Hello = :hello
+        
         def bye
           :bye
         end
@@ -40,10 +42,12 @@ describe Object2module do
       using Tweaks do
         "john".hello.should == :hello
         5.bye.should == :bye
+        Fixnum::Hello.should == :hello
       end
 
       lambda { "john".hello }.should.raise NoMethodError
       lambda { 5.bye }.should.raise NoMethodError
+      Fixnum.const_defined?(:Hello).should == false
     end
   end
 end
