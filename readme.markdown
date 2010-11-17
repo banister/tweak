@@ -16,7 +16,7 @@ Tweak provides the `using` method.
 * See the [source code](http://github.com/banister/tweak
 
 example: using
---------------------------
+-------------------------
 
 With the `using` method we can enhance a core class for the duration
 of a block:
