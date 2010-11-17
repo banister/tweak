@@ -54,6 +54,7 @@ means you cannot use Tweak to override existing functionality but
 more to augment and supplement that functionality.
 
 Tweak works by doing the following: 
+
 * Looks for top-level classes and modules with the same name as those
 defined under the using-module.
 * Uses `Object2module` to include the corresponding class/module
