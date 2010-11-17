@@ -62,7 +62,11 @@ defined under the using-module.
 * Uses `Object2module` to include the corresponding class/module
 defined under the using-module into the top-level class/module of the
 same name.
-* Uses `Remix` to uninclude that functionality at the end of the `using` block.
+* Uses `Remix` to uninclude that functionality at the end of the
+`using` block.
+
+Also look at the [Remix](http://github.com/banister/remix) library's
+`temp_include` and `temp_extend` methods for a more general solution than `Tweak`.
 
 Thread Safety
 --------------
