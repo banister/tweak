@@ -7,6 +7,8 @@ _Scoped modification of core classes_
 
 Add temporary functionality to core classes.
 
+Based on some ideas found in this Ruby-Forum thread: http://www.ruby-forum.com/topic/179060
+
 Tweak provides the `using` method.
 
 * Install the [gem](https://rubygems.org/gems/tweak): `gem install tweak`
@@ -66,6 +68,14 @@ Thread Safety
 --------------
 
 `tweak` is not threadsafe.
+
+Limitations
+-----------
+
+Does not work with nested modules, e.g `class String::SomethingElse`
+
+This is not intended to be a robust or serious solution, it's just a
+little experiment. :)
 
 Companion Libraries
 --------------------
