@@ -42,14 +42,13 @@ module Tweak
           # Only include the class/module from the using-module if:
           # 1. The class/module in the using-module is a module (or class)
           # 2. A corresponding module (or class) is found at top-level
-          if tweaked_source.instance_of?(Module) && Object.const_defined?(v) &&
-            Object.const_get(v).instance_of?(Module)
+          next if !tweaked_source.instance_of?(Module) && !Object.const_defined?(v) &&
+            !Object.const_get(v).instance_of?(Module)
           
-            tweak_dest = Object.const_get(v)
-            tweak_source = mod.const_get(v)
-            tweak_dest.gen_include(tweak_source)
-            tweaks[tweak_dest] = tweaked_source
-          end
+          tweak_dest = Object.const_get(v)
+          tweak_source = mod.const_get(v)
+          tweak_dest.gen_include(tweak_source)
+          tweaks[tweak_dest] = tweaked_source
         end
         
         yield
@@ -64,7 +63,7 @@ module Tweak
     end
   end
 end
-        
+
 class Object
   include Tweak::ObjectExtensions
 end
