@@ -7,13 +7,13 @@ _Scoped modification of core classes_
 
 Add temporary functionality to core classes.
 
-Based on some ideas found in this Ruby-Forum thread: http://www.ruby-forum.com/topic/179060
+Based on some ideas found in this [Ruby-Forum thread](http://www.ruby-forum.com/topic/179060)
 
-Tweak provides the `using` method.
+`Tweak` provides the `using` method.
 
 * Install the [gem](https://rubygems.org/gems/tweak): `gem install tweak`
 * Read the [documentation](http://rdoc.info/github/banister/tweak/master/file/README.markdown)
-* See the [source code](http://github.com/banister/tweak
+* See the [source code](http://github.com/banister/tweak)
 
 example: using
 -------------------------
@@ -50,12 +50,12 @@ of a block:
 How it works
 --------------
 
-Makes use of the Remix and Object2module libraries. Note that Tweak
+Makes use of the `Remix` and `Object2module` libraries. Note that `Tweak`
 modifies core classes by what is effectively a module inclusion, this
-means you cannot use Tweak to override existing functionality but
+means you cannot use `Tweak` to override existing functionality but
 more to augment and supplement that functionality.
 
-Tweak works by doing the following: 
+`Tweak` works by doing the following: 
 
 * Looks for top-level classes and modules with the same name as those
 defined under the using-module.
@@ -67,7 +67,7 @@ same name.
 Thread Safety
 --------------
 
-`tweak` is not threadsafe.
+`Tweak` is not threadsafe.
 
 Limitations
 -----------
